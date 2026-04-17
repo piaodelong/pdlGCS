@@ -48,16 +48,16 @@
         <file alias="PlanSimpleItemBasic.svg">resources/gear-black.svg</file>
         <file alias="PlanSimpleItemCamera.svg">resources/camera.svg</file>
         <file alias="PowerButton.svg">resources/PowerButton.svg</file>
-        <file alias="QGCLogoBlack.svg">resources/QGCLogoBlack.svg</file>
-        <file alias="QGCLogoFull.svg">resources/QGCLogoFull.svg</file>
-        <file alias="QGCLogoWhite.svg">resources/QGCLogoWhite.svg</file>
-        <file alias="QGCLogoArrow.svg">resources/QGCLogoArrow.svg</file>
-        <file alias="QGroundControlConnect.svg">resources/QGroundControlConnect.svg</file>
+        <file alias="QGCLogoBlack.svg">tzx.png</file>
+        <file alias="QGCLogoFull.svg">tzx.png</file>
+        <file alias="QGCLogoWhite.svg">tzx.png</file>
+        <file alias="QGCLogoArrow.svg">tzx.png</file>
+        <file alias="QGroundControlConnect.svg">tzx.png</file>
         <file alias="RallyPoint.svg">resources/RallyPoint.svg</file>
         <file alias="rtl.svg">resources/rtl.svg</file>
         <file alias="sliders.svg">resources/sliders.svg</file>
         <file alias="SaveToDisk.svg">resources/SaveToDisk.svg</file>
-        <file alias="SplashScreen">resources/SplashScreen.png</file>
+        <file alias="SplashScreen">tzx.png</file>
         <file alias="Stop.svg">resources/Stop.svg</file>
         <file alias="takeoff.svg">resources/takeoff.svg</file>
         <file alias="terrain.svg">resources/terrain.svg</file>
@@ -78,6 +78,7 @@
         <file alias="GripperRelease.svg">resources/GripperRelease.svg</file>
         <file alias="GripperGrab.svg">resources/GripperGrab.svg</file>
         <file alias="qgroundcontrol.ico">resources/icons/qgroundcontrol.ico</file>
+        <file alias="tzx.png">tzx.png</file>
     </qresource>
     <qresource prefix="/res/firmware">
         <file alias="3drradio.png">resources/firmware/3drradio.png</file>
