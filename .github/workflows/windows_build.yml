@@ -33,7 +33,7 @@ concurrency:
   cancel-in-progress: ${{ github.ref != 'refs/heads/main' && github.ref != 'refs/heads/master' }}
 
 permissions:
-  contents: read
+  contents: write   # 打 tag 时需要写权限来发 GitHub Release
 
 jobs:
   build:
