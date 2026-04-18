@@ -90,12 +90,33 @@ Item {
                         height:     parent.height
                         spacing:    0
 
-                        QGCToolBarButton {
-                            id:                 qgcButton
-                            Layout.fillHeight:  true
-                            icon.source:        "/res/QGCLogoFull.svg"  // 运行期 Interceptor 会指向 TZX Logo
-                            logo:               true
-                            onClicked:          mainWindow.showToolSelectDialog()
+                        // ---- TZX Logo 按钮（替代 QGCToolBarButton） ----
+                        // 官方 QGCToolBarButton 把图标强制 width = height（正方形），导致宽高比
+                        // 2.71:1 的 TZX Logo 被大量留白，视觉上偏小。这里直接用 Image+MouseArea
+                        // 按 Logo 实际比例展示，宽度由图片 paintedWidth 驱动 + 一点左右 padding。
+                        Item {
+                            id:                     qgcButton
+                            Layout.fillHeight:      true
+                            Layout.preferredWidth:  logoImg.paintedWidth + ScreenTools.defaultFontPixelWidth * 1.5
+
+                            Image {
+                                id:                     logoImg
+                                anchors.verticalCenter: parent.verticalCenter
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                height:                 parent.height * 0.7
+                                fillMode:               Image.PreserveAspectFit
+                                source:                 "/res/QGCLogoFull.svg"  // Interceptor → TZX Logo
+                                sourceSize.height:      parent.height * 2       // 2x 超采样，避免高 DPI 糊
+                                smooth:                 true
+                                mipmap:                 true
+                            }
+
+                            MouseArea {
+                                anchors.fill:   parent
+                                hoverEnabled:   true
+                                cursorShape:    Qt.PointingHandCursor
+                                onClicked:      mainWindow.showToolSelectDialog()
+                            }
                         }
 
                         MainStatusIndicator {
